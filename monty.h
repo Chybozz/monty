@@ -39,8 +39,8 @@ typedef struct bus_s
 	char *content;
 	int lifi;
 }  bus_t;
-
 extern bus_t bus;
+
 /**
  * struct instruction_s - opcode and its function
  * @opcode: the opcode
@@ -58,9 +58,9 @@ typedef struct instruction_s
 char *_realloc(char *ptr, unsigned int old_size, unsigned int new_size);
 ssize_t getstdin(char **lineptr, int file);
 char  *clean_line(char *content);
-void f_push(stack_t **head, unsigned int counter);
-void f_pall(stack_t **head, unsigned int counter);
-void f_pint(stack_t **head, unsigned int number);
+void f_push(stack_t **head, unsigned int num);
+void f_pall(stack_t **head, unsigned int num);
+void f_pint(stack_t **head, unsigned int num);
 int execute(char *content, stack_t **head, unsigned int counter, FILE *file);
 void free_stack(stack_t *head);
 void f_pop(stack_t **head, unsigned int counter);
@@ -75,8 +75,8 @@ void f_pchar(stack_t **head, unsigned int counter);
 void f_pstr(stack_t **head, unsigned int counter);
 void f_rotl(stack_t **head, unsigned int counter);
 void f_rotr(stack_t **head, __attribute__((unused)) unsigned int counter);
-void addnode(stack_t **head, int n);
-void addqueue(stack_t **head, int n);
+void addnode(stack_t **head, int nd);
+void addqueue(stack_t **head, int nd);
 void f_queue(stack_t **head, unsigned int counter);
 void f_stack(stack_t **head, unsigned int counter);
 
