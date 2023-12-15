@@ -8,7 +8,7 @@
 void f_queue(stack_t **head, unsigned int counts)
 {
 	(void)head;
-	(void)count;
+	(void)counts;
 	bus.lifi = 1;
 }
 
