@@ -9,7 +9,7 @@ void f_rotl(stack_t **head,  __attribute__((unused)) unsigned int counts)
 {
 	stack_t *tmp = *head, *aux;
 
-	if (*head == NULL || (*head)->next == NULL)
+	if (!*head || !(*head)->next)
 	{
 		return;
 	}
