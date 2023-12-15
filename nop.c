@@ -8,5 +8,5 @@
 void f_nop(stack_t **head, unsigned int counts)
 {
 	(void) counts;
-	(void);
+	(void) head;
 }
