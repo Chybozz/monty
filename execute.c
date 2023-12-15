@@ -27,23 +27,23 @@ int execute(char *content, stack_t **stack, unsigned int counts, FILE *file)
 				{"stack", f_stack},
 				{NULL, NULL}
 				};
-	unsigned int i = 0;
-	char *op;
+	unsigned int j = 0;
+	char *ops;
 
-	op = strtok(content, " \n\t");
-	if (op && op[0] == '#')
+	ops = strtok(content, " \n\t");
+	if (ops && ops[0] == '#')
 		return (0);
 	bus.arg = strtok(NULL, " \n\t");
-	while (opst[i].opcode && op)
+	while (opst[j].opcode && ops)
 	{
-		if (strcmp(op, opst[i].opcode) == 0)
-		{	opst[i].f(stack, counts);
+		if (strcmp(ops, opst[j].opcode) == 0)
+		{	opst[j].f(stack, counts);
 			return (0);
 		}
-		i++;
+		j++;
 	}
-	if (op && opst[i].opcode == NULL)
-	{ fprintf(stderr, "L%d: unknown instruction %s\n", counts, op);
+	if (ops && opst[j].opcode == NULL)
+	{ fprintf(stderr, "L%d: unknown instruction %s\n", counts, ops);
 		fclose(file);
 		free(content);
 		free_stack(*stack);
