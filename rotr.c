@@ -10,7 +10,7 @@ void f_rotr(stack_t **head, __attribute__((unused)) unsigned int counts)
 	stack_t *cpy;
 
 	cpy = *head;
-	if (*head == NULL || (*head)->next == NULL)
+	if (!*head || !(*head)->next)
 	{
 		return;
 	}
