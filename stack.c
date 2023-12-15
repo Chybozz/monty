@@ -8,6 +8,6 @@
 void f_stack(stack_t **head, unsigned int counts)
 {
 	(void)head;
-	(void)count;
+	(void)counts;
 	bus.lifi = 0;
 }
