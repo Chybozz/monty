@@ -11,7 +11,7 @@ void f_pchar(stack_t **head, unsigned int counts)
 	stack_t *h;
 
 	h = *head;
-	if (!h)
+	if (!h == null)
 	{
 		fprintf(stderr, "L%d: can't pchar, stack empty\n", counts);
 		fclose(bus.file);
