@@ -7,7 +7,7 @@
 */
 void f_push(stack_t **head, unsigned int num)
 {
-	int n, j = 0, flag = 0;
+	int n, j = 0, fg = 0;
 
 	if (bus.arg)
 	{
@@ -18,11 +18,11 @@ void f_push(stack_t **head, unsigned int num)
 		{
 			if (bus.arg[j] > 57 || bus.arg[j] < 48)
 			{
-				flag = 1;
+				fg = 1;
 			}
 			j++;
 		}
-		if (flag == 1)
+		if (fg == 1)
 		{ fprintf(stderr, "L%d: usage: push integer\n", num);
 			fclose(bus.file);
 			free(bus.content);
